@@ -137,8 +137,9 @@ export class TrackController {
     if (!message && pathAudio) {
       const file = createReadStream(pathAudio);
       res.set({
-        'Content-Type': 'audio/mpeg; charset=binary',
-        'Content-Disposition': `attachment; filename=${audioName}`,
+        'Content-Type':
+          'audio/mpeg;audio/x-mpeg;audio/mpeg3;audio/x-mpeg-3; charset=binary',
+        'Content-Disposition': `attachment; filename="my_mp3_filename.MP3"`,
       });
       return new StreamableFile(file);
     } else {
