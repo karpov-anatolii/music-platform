@@ -1,0 +1,121 @@
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $bodyFontFamily;
+  margin: 0;
+  background-color: #121212;
+}
+html {
+  font-size: 14px;
+}
+
+.main {
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: $backgroundMain no-repeat center;
+  background-size: cover;
+  z-index: 0;
+  height: 100%;
+}
+
+.main-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+  background: linear-gradient(
+    150deg,
+    $mainGradient2,
+    $mainGradient1 $strengthGradient1
+  );
+}
+.card_transparent {
+  background-color: $cardTransparent;
+}
+.registration_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration_card_button {
+  align-self: flex-end;
+  margin: 20px;
+}
+
+.main_index_grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_box_menu {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  max-height: 35px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.nav_but_main {
+  margin-left: 20px;
+}
+.nav_logo {
+  cursor: pointer;
+  overflow: visible;
+  font-size: 1.6em;
+}
+
+.center {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 360px) {
+  .nav_logo {
+    font-size: 1.4em;
+    margin-left: -15px;
+  }
+}
+
+.icon_delete {
+  color: $mainGradient2;
+}
+.player_settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.card_profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}

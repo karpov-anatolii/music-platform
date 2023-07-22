@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.player {
+  // height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+  background-color: $backgroundColort2;
+}
